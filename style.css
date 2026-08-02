@@ -48,8 +48,10 @@ nav a {
 }
 
 .hero h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
+    font-size: 42px;
+    color: #d4af37;
+    line-height: 1.2;
+}
 }
 
 .hero p {
@@ -57,13 +59,21 @@ nav a {
     margin: 20px 0;
 }
 
-.buttons a {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px 35px;
-    background: #d4af37;
-    color: black;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+}
+
+.buttons a{
+    display:inline-block;
+    padding:15px 30px;
+    background:#d4af37;
+    color:#000;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
 }
