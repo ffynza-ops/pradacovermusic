@@ -77,3 +77,31 @@ nav a {
     font-weight:bold;
 }
 }
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:#161616;
+border-radius:12px;
+overflow:hidden;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+.card h3{
+padding:15px;
+color:#d4af37;
+}
