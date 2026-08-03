@@ -33,13 +33,15 @@ nav a {
     margin-left: 25px;
 }
 
-.hero {
-    text-align: center;
-    padding: 120px 20px;
-    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
-    url("images/file_000000006fb08211857634ca5d39cd70.png");
-    background-size: cover;
-    background-position: center;
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+    url("images/IMG-20260713-WA0001.jpg");
+    background-size:cover;
+    background-position:center;
+}
 }
 
 .hero h1 {
