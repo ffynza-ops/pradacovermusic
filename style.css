@@ -127,3 +127,32 @@ nav a {
         object-fit: cover !important;
     }
 }
+/* Gaya Tombol SoundCloud */
+.btn.soundcloud {
+    background-color: #ff5500;
+    color: #fff;
+}
+
+/* Gaya Tombol Social Links di Bawah */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px 16px;
+    border: 1px solid #ffd700;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #ffd700;
+    color: #000;
+}
