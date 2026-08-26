@@ -153,10 +153,12 @@ nav a{
     width:180px;
     text-align:center;
 }
-
-.cards{
-    grid-template-columns:1fr;
+.cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 10px;
 }
+
 
 .card img{
     width:100%;
