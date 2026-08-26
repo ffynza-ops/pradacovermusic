@@ -156,3 +156,36 @@ nav a {
     background-color: #ffd700;
     color: #000;
 }
+/* Styling Tombol Musik (Spotify, YouTube, SoundCloud) */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn.spotify {
+    background-color: #1db954;
+    color: #fff;
+}
+
+.btn.youtube {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.btn.soundcloud {
+    background-color: #ff5500;
+    color: #fff;
+}
