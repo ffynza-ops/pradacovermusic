@@ -5,168 +5,125 @@
 }
 
 body {
-    background: #0b0b0b;
-    color: white;
-    font-family: Poppins,sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
-    background: #111;
+    padding: 20px 50px;
+    background-color: #1a1a1a;
 }
 
-.logo h1 {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
     color: #d4af37;
-    font-family: Cinzel,serif;
 }
 
-.logo p {
-    color: #aaa;
-}
-
+nav display:flex; gap:20px; }
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    margin-left: 25px;
+    font-weight: bold;
 }
 
-.hero{
-    text-align:center;
-    padding:80px 20px;
-    background:
-    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
-    url("images/IMG-20260713-WA0001.jpg");
-    background-size:cover;
-    background-position:center;
-}
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
+    background-size: cover;
 }
 
-.hero h1 {
-    font-size: 60px;
-    color: #d4af37;
+.hero h1 { font-size: 48px; margin-bottom: 10px; }
+.hero h2 { font-size: 32px; margin-bottom: 15px; color: #d4af37; }
+.hero p { font-size: 20px; margin-bottom: 20px; }
+
+.buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #d4af37;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.hero h2 {
-    font-size: 42px;
-    color: #d4af37;
-    line-height: 1.2;
-}
-}
-
-.hero p {
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.buttons{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-    margin-top:25px;
-}
-
-.buttons a{
-    display:inline-block;
-    padding:15px 30px;
-    background:#d4af37;
-    color:#000;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-}
-}
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-padding:30px;
-}
-
-.card{
-background:#161616;
-border-radius:12px;
-overflow:hidden;
-text-align:center;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
-width:100%;
-display:block;
-}
-
-.card h3{
-padding:15px;
-color:#d4af37;
-}
-/* Tampilan HP */
-@media (max-width:768px){
-
-header{
-    flex-direction:column;
-    padding:15px;
-    text-align:center;
-}
-
-.logo{
-    font-size:24px;
-    margin-bottom:15px;
-}
-
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:12px;
-}
-
-nav a{
-    margin:0;
-    font-size:16px;
-}
-
-.hero{
-    padding:80px 20px;
-}
-
-.hero h1{
-    font-size:44px;
-}
-
-.hero h2{
-    font-size:30px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-.buttons a{
-    width:180px;
-    text-align:center;
-}
+/* KARTU ALBUM / MUSIC */
 .cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
 .card {
-    max-width: 100%;
+    background: #161616;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: .3s;
+    width: 220px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
 }
 
 .card img {
     width: 100%;
-    max-height: 180px;
+    height: 200px;
     object-fit: cover;
+    display: block;
 }
+
+.card h3 {
+    padding: 15px;
+    color: #d4af37;
 }
+
+/* TAMPILAN HP (RESPONSIVE) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 { font-size: 36px; }
+    .hero h2 { font-size: 24px; }
+
+    /* PAKSA 2 KOLOM DI HP */
+    .cards {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 10px !important;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .card img {
+        width: 100% !important;
+        max-height: 160px !important;
+        object-fit: cover !important;
+    }
 }
