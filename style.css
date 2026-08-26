@@ -2,138 +2,98 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #121212;
     color: #ffffff;
+    padding: 20px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #1a1a1a;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #d4af37;
-}
-
-nav display:flex; gap:20px; }
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero {
+header h1 {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
-    background-size: cover;
+    margin-bottom: 25px;
+    color: #ffffff;
 }
 
-.hero h1 { font-size: 48px; margin-bottom: 10px; }
-.hero h2 { font-size: 32px; margin-bottom: 15px; color: #d4af37; }
-.hero p { font-size: 20px; margin-bottom: 20px; }
-
-.buttons a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: #d4af37;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+.title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 22px;
 }
 
 /* KARTU ALBUM / MUSIC */
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 10px 0;
 }
 
 .card {
-    background: #161616;
+    background: #1e1e1e;
     border-radius: 12px;
     overflow: hidden;
     text-align: center;
-    transition: .3s;
-    width: 220px;
+    padding-bottom: 15px;
+    transition: transform 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 }
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     display: block;
 }
 
 .card h3 {
-    padding: 15px;
-    color: #d4af37;
+    padding: 10px 5px 5px;
+    color: #ffd700;
+    font-size: 15px;
 }
 
-/* TAMPILAN HP (RESPONSIVE) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .logo {
-        margin-bottom: 15px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .hero h1 { font-size: 36px; }
-    .hero h2 { font-size: 24px; }
-
-    /* PAKSA 2 KOLOM DI HP */
-    .cards {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-        padding: 10px !important;
-    }
-
-    .card {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .card img {
-        width: 100% !important;
-        max-height: 160px !important;
-        object-fit: cover !important;
-    }
-}
-/* Gaya Tombol SoundCloud */
-.btn.soundcloud {
-    background-color: #ff5500;
-    color: #fff;
+/* TOMBOL MUSIK (SPOTIFY, YOUTUBE, SOUNDCLOUD) */
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    padding: 0 5px;
+    flex-wrap: wrap;
 }
 
-/* Gaya Tombol Social Links di Bawah */
+.links a, .btn {
+    display: inline-block !important;
+    padding: 6px 10px !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    line-height: 1 !important;
+}
+
+.links a.spotify, .btn.spotify {
+    background-color: #1db954 !important;
+    color: #ffffff !important;
+}
+
+.links a.youtube, .btn.youtube {
+    background-color: #ff0000 !important;
+    color: #ffffff !important;
+}
+
+.links a.soundcloud, .btn.soundcloud {
+    background-color: #ff5500 !important;
+    color: #ffffff !important;
+}
+
+/* SOCIAL LINKS & CONTACT */
 .social-links {
     display: flex;
     justify-content: center;
@@ -156,36 +116,15 @@ nav a {
     background-color: #ffd700;
     color: #000;
 }
-/* Styling Tombol Musik (Spotify, YouTube, SoundCloud) */
-.links {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
 
-.btn {
-    display: inline-block;
-    padding: 6px 12px;
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.btn.spotify {
-    background-color: #1db954;
-    color: #fff;
-}
-
-.btn.youtube {
-    background-color: #ff0000;
-    color: #fff;
-}
-
-.btn.soundcloud {
-    background-color: #ff5500;
-    color: #fff;
+/* TAMPILAN HP (RESPONSIVE 2 KOLOM) */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    
+    .card img {
+        height: 150px !important;
+    }
 }
